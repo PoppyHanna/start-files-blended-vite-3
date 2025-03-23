@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { transformCountriesData, transformCountryData } from '../helpers/transformCountries';
+import { transformCountriesData, transformCountryData } from '../helpers/transformCounties';
 
 axios.defaults.baseURL = 'https://restcountries.com/v3.1';
 
@@ -23,3 +23,23 @@ export const fetchByRegion = async region => {
 
   return countries;
 };
+
+// import axios from 'axios';
+// import { transformCountriesData, transformCountryData } from '../helpers/transformCountries';
+
+// axios.defaults.baseURL = 'https://restcountries.com/v3.1';
+
+// export const getCountries = async () => {
+//   const { data } = await axios.get('/region/europe');
+//   return transformCountriesData(data);
+// };
+
+// export const fetchCountry = async (id) => {
+//   const { data } = await axios.get(`/name/${id}`);
+//   return transformCountryData(data)[0];
+// };
+
+// export const fetchByRegion = async (region) => {
+//   const { data } = await axios.get(`/region/${region}`);
+//   return transformCountriesData(data);
+// };
